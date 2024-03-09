@@ -2,7 +2,7 @@ name: build obs plugin
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, vendor_requests ]
   pull_request:
     branches: [ master ]
 

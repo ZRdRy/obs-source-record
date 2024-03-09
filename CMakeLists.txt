@@ -22,7 +22,9 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/version.h.in ${CMAKE_CURRENT_SOURCE_D
 
 target_sources(${PROJECT_NAME} PRIVATE
 	source-record.c
-	source-record.h)
+	source-record.h
+	obs-websocket-api.h
+	version.h)
 
 
 if(BUILD_OUT_OF_TREE)
