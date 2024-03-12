@@ -1451,6 +1451,8 @@ static bool start_record_source(obs_source_t *source, obs_data_t *request_data,
 			obs_source_filter_add(source, filter);
 		}
 	}
+	if (!obs_source_enabled(filter))
+		obs_source_set_enabled(filter, true);
 	obs_data_t *settings = obs_source_get_settings(filter);
 	const char *filename = obs_data_get_string(request_data, "filename");
 	struct source_record_filter_context *context = obs_obj_get_data(filter);
